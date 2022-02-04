@@ -3,9 +3,11 @@ const ejercicio1 = [
   19, 88, 456, 13, 23, 24,
 ];
 const esPrimo = (numero) =>{
-  if (numero%numero == 0){
+  for(let i = 0; i<ejercicio1.length; i++){
+  if (numero%i == 0){
     console.log(`${numero} es primo`);
   }
+}
 };
 ejercicio1.forEach((numero)=> {
   esPrimo(numero);
@@ -46,9 +48,20 @@ const ejercicio2 = [
 
 const bienvenidx = (invitado) => {
   if (invitado.edad >= 18 && invitado.esFamiliar == true){
-    console.log(`Bienvenidx, ${invitado}. Puedes pasar`);
+    console.log(`Bienvenidx, ${invitado.nombre}. Puedes pasar`);
   }
 }
 ejercicio2.forEach((invitado) =>{
+  bienvenidx(invitado);
 })
+
+let serieFibonacci = [];
+let primerTermino = 0;
+let segundoTermino = 1;
+
+for (let i=0; i <= 50; i++){
+    serieFibonacci =  [primerTermino + segundoTermino];
+    serieFibonacci.push(serieFibonacci);
+  }
+console.log(serieFibonacci)
 
