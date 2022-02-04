@@ -2,6 +2,14 @@ const ejercicio1 = [
   3, 100, 85, 64, 46, 39, 40, 30, 20, 24, 25, 6, 10, 54, 82, 71, 67, 77, 17, 29,
   19, 88, 456, 13, 23, 24,
 ];
+const esPrimo = (numero) =>{
+  if (numero%numero == 0){
+    console.log(`${numero} es primo`);
+  }
+};
+ejercicio1.forEach((numero)=> {
+  esPrimo(numero);
+});
 
 const ejercicio2 = [
   {
@@ -35,3 +43,12 @@ const ejercicio2 = [
     esFamiliar: true,
   },
 ];
+
+const bienvenidx = (invitado) => {
+  if (invitado.edad >= 18 && invitado.esFamiliar == true){
+    console.log(`Bienvenidx, ${invitado}. Puedes pasar`);
+  }
+}
+ejercicio2.forEach((invitado) =>{
+})
+
