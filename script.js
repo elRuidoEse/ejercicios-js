@@ -4,7 +4,7 @@ const ejercicio1 = [
 ];
 const esPrimo = (numero) =>{
   for(let i = 0; i<ejercicio1.length; i++){
-  if (numero%i == 0){
+  if (numero%2 === 1){
     console.log(`${numero} es primo`);
   }
 }
@@ -55,13 +55,15 @@ ejercicio2.forEach((invitado) =>{
   bienvenidx(invitado);
 })
 
-let serieFibonacci = [];
-let primerTermino = 0;
-let segundoTermino = 1;
+let serieFibonacci = 0;
+let terminoAnterior = 0;
+let terminoActual = 1;
+console.log(serieFibonacci);
+for (let i=0; i <50; i++){
+  serieFibonacci = terminoAnterior + terminoActual;
+  terminoAnterior = terminoActual;
+  terminoActual = serieFibonacci;
+  console.log(serieFibonacci);
+}
 
-for (let i=0; i <= 50; i++){
-    serieFibonacci =  [primerTermino + segundoTermino];
-    serieFibonacci.push(serieFibonacci);
-  }
-console.log(serieFibonacci)
 
